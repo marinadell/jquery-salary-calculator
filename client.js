@@ -4,34 +4,46 @@ $(document).ready(readyNow);
 
 function readyNow(){
     console.log('Jquery');
-    $('#submit').on('click', getFirstName);
-    $('#submit').on('click', getLastName);
-    $('#submit').on('click', getID);
-    $('#submit').on('click', getTitle);
-    $('#submit').on('click', getSalary);
+    $('#submit').on('click', clickButton);
+}
+
+function clickButton() {
+    let clicky = new EmployeeInfo (getFirstName(), getLastName(), getID(), getTitle(), getSalary());
+    console.log(clicky);
 }
 
 function getFirstName() {
     let firstName = $('#firstname').val();
-    console.log(firstName);
+    return firstName
 }
 
 function getLastName() {
     let lastName = $('#lastname').val();
-    console.log(lastName);
+    return lastName
 }
 
 function getID() {
     let idnum = $('#idnum').val();
-    console.log(idnum);
+    return idnum
 }
 
 function getTitle() {
     let title = $('#title').val();
-    console.log(title);
+    return title
 }
 
 function getSalary() {
     let aSalary = $('#salary').val();
-    console.log(aSalary);
+    return aSalary;
 }
+
+class EmployeeInfo{
+    constructor(fname,lname,id,title,salary){
+        this.firstName = fname;
+        this.lastName = lname;
+        this.id = id;
+        this.title = title;
+        this.salary = salary;
+    }
+}
+
