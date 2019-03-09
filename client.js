@@ -6,15 +6,17 @@ function readyNow(){
     console.log('Jquery');
     $('#submit').on('click', clickButton);
 }
-
+let employeeTable = []
 function clickButton() {
     let clicky = new EmployeeInfo (getFirstName(), getLastName(), getID(), getTitle(), getSalary());
-    console.log(clicky);
+    employeeTable.push(clicky);
+    console.log(employeeTable);
+    appendEInfo();
 }
 
 function getFirstName() {
     let firstName = $('#firstname').val();
-    return firstName
+    return firstName;
 }
 
 function getLastName() {
@@ -45,5 +47,8 @@ class EmployeeInfo{
         this.title = title;
         this.salary = salary;
     }
+}
+
+function appendEInfo(){
 }
 
