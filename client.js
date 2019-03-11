@@ -20,6 +20,7 @@ function addEmployeeInfo(){
         empInfo.push(employ);
         clearEmployeeForm();
         render();
+        calcMonthlyCost();
     }
 }
 
@@ -98,3 +99,15 @@ function clearEmployeeForm() {
     }
   }
 
+  function calcMonthlyCost() {
+    let totalMonthly = 0;
+    for (let i = 0; i < employeeI.length; i++) {
+        totalMonthly += Number(employeeI[i].annualSalary) / 12;
+    }//end for
+    if (totalMonthly > 20000) {
+        $('#addMonthlyTotal').css({ 'background-color': 'red' }).append('$', totalMonthly.toFixed(2));
+    }//end if
+    else {
+        return $('#addMonthlyTotal').css({ 'background-color': 'lightgray' }).append('$', totalMonthly.toFixed(2));
+    }
+}
