@@ -4,5 +4,38 @@ border: 1px solid black;
 }
 
 th {
+    border: 5px solid black;
+    background-color: aqua;
+    font: bold;
+    font-family: fantasy;
+    text-decoration: underline;
+}
+
+tr {
+    border: 2.5px solid black;
+}
+
+td {
     border: 1px solid black;
+    background-color: darkviolet;
+    font-family: fantasy;
+    text-align: center;
+}
+
+header > h1 {
+    text-align: center;
+    font-family: fantasy;
+    background-color: gray;
+    text-decoration: underline overline;
+    color: darkviolet
+}
+
+body {
+    background-color: lightgray;
+}
+
+h3 {
+    font-family: fantasy;
+    text-decoration: underline;
+    color: darkviolet
 }
